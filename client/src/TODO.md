@@ -5,7 +5,7 @@
 [] - Advertisement
 [] - Contact Us
 [] - Donate
-[] - FAQQ
+[] - FAQ
 [] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data
