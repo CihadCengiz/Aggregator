@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Internships from './Internships';
 import About from './About';
 import Home from './Home';
+import Contact from './Contact';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/internships" component={Internships} />
           <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
         {/* <h1 className="mb-4">Find Internships</h1> */}

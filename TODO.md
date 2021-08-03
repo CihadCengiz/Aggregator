@@ -4,8 +4,11 @@
 [] - Logo
 [] - Advertisement
 [] - Contact Us
+    [x] - Add Contact Form
+    [] - Design changes
 [] - Donate
 [] - FAQ
+[] - Header changes
 [] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data

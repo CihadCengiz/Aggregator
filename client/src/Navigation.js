@@ -1,14 +1,13 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import logo from "./logo.png";
-import './App.css';
+import "./App.css";
 import { Link } from "react-router-dom";
 
 function Navigation() {
-    const navStyle = {
-        color : 'white',        
-    }
-
+  const navStyle = {
+    color: "white",
+  };
 
   return (
     <Navbar
@@ -25,15 +24,20 @@ function Navigation() {
           src={logo}
           className="me-2"
         />
-        <Link style={navStyle} to='/'>Find Internships</Link>
+        <Link style={navStyle} to="/">
+          Find Internships
+        </Link>
       </Navbar.Brand>
       <Nav className="me-5">
         <Link style={navStyle} to="/internships">
           <Nav className="me-2">Internships</Nav>
         </Link>
         <Link style={navStyle} to="/about">
-          <Nav>About</Nav>
-          </Link>
+          <Nav className="me-2">About</Nav>
+        </Link>
+        <Link style={navStyle} to="/contact">
+          <Nav>Contact us</Nav>
+        </Link>
       </Nav>
     </Navbar>
   );

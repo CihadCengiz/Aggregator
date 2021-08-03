@@ -3,6 +3,9 @@ var cors = require("cors");
 const sequelize = require("./api/database/db");
 const Jobs = require("./api/model/Jobs");
 var cron = require("node-cron");
+var router = express.Router();
+var nodemailer = require('nodemailer');
+const creds = require('./contact/config');
 const app = express();
 const port = 3001;
 
@@ -51,6 +54,53 @@ app.get("/jobs", async (req, res) => {
   });
   currentDegree=[]
 });
+
+var transport = {
+  host: 'smtp.hostinger.com', // Don’t forget to replace with the SMTP host of your provider
+  port: 465,
+  auth: {
+  user: creds.USER,
+  pass: creds.PASS
+}
+}
+
+var transporter = nodemailer.createTransport(transport)
+
+transporter.verify((error, success) => {
+if (error) {
+  console.log(error);
+} else {
+  console.log('Server is ready to take messages');
+}
+});
+
+router.post('/send', (req, res, next) => {
+var name = req.body.name
+var email = req.body.email
+var message = req.body.message
+var content = `name: ${name} \n email: ${email} \n message: ${message} `
+
+var mail = {
+  from: name,
+  to: 'info@cihadcengiz.com',  // Change to email address that you want to receive messages on
+  subject: 'Aggregator New Message!',
+  text: content
+}
+
+transporter.sendMail(mail, (err, data) => {
+  if (err) {
+    res.json({
+      status: 'fail'
+    })
+  } else {
+    res.json({
+     status: 'success'
+    })
+  }
+})
+})
+
+app.use('/', router)
 
 // cron.schedule('*/5 * * * *', () => scrapeProduct('https://erasmusintern.org/traineeships','http://globalplacement.com/en/search-internships'));
 
