@@ -2,11 +2,12 @@
 
 [] - About Page
 [] - Logo
-[] - Advertisement
+[] - Advertisement????
+[] - Responsive design
 [] - Contact Us
     [x] - Add Contact Form
     [] - Design changes
-[] - Donate
+[] - Donate????
 [] - FAQ
 [] - Header changes
 [] - Footer
@@ -21,3 +22,4 @@
     [] - http://www.summerschoolsineurope.eu
 [] - UI changes
 [] - Schedule Cron jobs
+[] - Deploy!

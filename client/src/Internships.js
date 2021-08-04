@@ -99,11 +99,11 @@ export default function Internships() {
   return (
     <Container fluid className="my-4 px-5">
       <Row className="px-5">
-        <Col sm={3}>
-          <div>Advertisement</div>
+        <Col xs={12} sm={4} md={3} lg={3} className="">
+          <div className="d-flex justify-content-center">Advertisement</div>
           <CheckBox onParamChange={handleChange} />
         </Col>
-        <Col>
+        <Col xs={12} sm={8} md={9} lg={9}>
           <div className="d-flex justify-content-center">
             {loading && <h1>Loading...</h1>}
             {error && <h1>Error...</h1>}
