@@ -1,5 +1,7 @@
 import { useReducer, useEffect } from "react";
 import axios from "axios";
+import {BASE_API_URL} from './BASE_API'
+
 
 const ACTIONS = {
   MAKE_REQUEST: "make-request",
@@ -34,7 +36,7 @@ export default function useFetchJobs(params, page, size) {
   useEffect(() => {
     const cancelToken1 = axios.CancelToken.source()    
     dispatch({ type: ACTIONS.MAKE_REQUEST });
-    axios.get(`http://localhost:3001/jobs?page=${page}&size=${size}`, { 
+    axios.get(`${BASE_API_URL}/jobs?page=${page}&size=${size}`, { 
         cancelToken: cancelToken1.token,
         params: { page: page, size: size, ...params}
     }).then(res => {
@@ -45,7 +47,7 @@ export default function useFetchJobs(params, page, size) {
     });
     
     const cancelToken2 = axios.CancelToken.source()
-    axios.get(`http://localhost:3001/jobs?page=${page}`, { 
+    axios.get(`${BASE_API_URL}/jobs?page=${page}`, { 
         cancelToken: cancelToken2.token,
         params: { page: page + 1, ...params}
     }).then(res => {

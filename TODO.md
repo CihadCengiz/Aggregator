@@ -1,11 +1,14 @@
 //TODO
 
-[] - About Page
 [] - Logo
-[] - Advertisement
+[] - Advertisement????
+[x] - Responsive design
 [] - Contact Us
-[] - Donate
+    [x] - Add Contact Form
+    [] - Design changes
+[] - Donate????
 [] - FAQ
+[] - Header changes
 [] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data
@@ -18,3 +21,4 @@
     [] - http://www.summerschoolsineurope.eu
 [] - UI changes
 [] - Schedule Cron jobs
+[] - Deploy!

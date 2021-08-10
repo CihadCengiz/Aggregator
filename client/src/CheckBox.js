@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Form } from "react-bootstrap";
 
 const SearchTitle = styled.h4`
-  font-size: 2em;
-  text-align: left;
+  font-size: 1.5em;
+  text-align: center;
   color: palevioletred;
   padding-bottom: 0.5em;
 `;
@@ -13,8 +13,7 @@ const StyledBg = styled.div`
   background: darkgray;
   color: white;
   font-size: 1em;
-  text-align: left;
-  padding-left: 1.35em;
+  text-align: center;
   font-weight: 450;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -25,7 +24,7 @@ const StyledCheckBox = styled.div`
 
 function CheckBox({ onParamChange }) {
   return (
-    <div>
+    <div className="checkbox-parent">
       <SearchTitle>Advanced Search</SearchTitle>
       <StyledBg>Degree</StyledBg>
       <StyledCheckBox>

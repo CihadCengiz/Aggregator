@@ -1,40 +1,52 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "./logo.png";
-import './App.css';
+import "./App.css";
 import { Link } from "react-router-dom";
 
 function Navigation() {
-    const navStyle = {
-        color : 'white',        
-    }
-
+  const navStyle = {
+    color: "white",
+  };
 
   return (
     <Navbar
       bg="secondary"
       variant="dark"
       sticky="top"
-      className="d-flex justify-content-between px-5"
+      expand='lg'
+      collapseOnSelect 
+      className="d-flex justify-content-between"
     >
-      <Navbar.Brand className="px-5">
+      <Container fluid>
+      <Navbar.Brand className="d-flex align-items-center">
         <img
           height="100px"
           width="100px"
           alt="logo"
           src={logo}
-          className="me-2"
         />
-        <Link style={navStyle} to='/'>Find Internships</Link>
+
+        <Nav.Link as={Link} eventKey="0" style={navStyle} to="/">
+          Find Internships
+        </Nav.Link>
       </Navbar.Brand>
-      <Nav className="me-5">
-        <Link style={navStyle} to="/internships">
-          <Nav className="me-2">Internships</Nav>
-        </Link>
-        <Link style={navStyle} to="/about">
-          <Nav>About</Nav>
-          </Link>
-      </Nav>
+        <Navbar.Toggle className="flex-md-row-reverse flex-sm-row align-items-center" />
+        <Navbar.Collapse className="ms-auto">
+          <Nav className="ms-auto">
+            <Nav.Link as={Link} eventKey="1" style={navStyle} to="/internships">
+              <Nav>Internships</Nav>
+            </Nav.Link>
+            <Nav.Link as={Link} eventKey="2" style={navStyle} to="/Faq">
+              <Nav>FAQ</Nav>
+            </Nav.Link>
+            <Nav.Link as={Link} eventKey="3" style={navStyle} to="/contact">
+              <Nav>Contact us</Nav>
+            </Nav.Link>
+          </Nav>
+
+        </Navbar.Collapse>
+        </Container>
     </Navbar>
   );
 }
