@@ -6,11 +6,15 @@ var cron = require("node-cron");
 var router = express.Router();
 var nodemailer = require('nodemailer');
 const creds = require('./contact/config');
+const path = require('path');
+const buildPath = path.join(__dirname, 'build');
+require('dotenv').config()
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(buildPath));
 
 sequelize.sync().then(() => console.log("db is ready"));
 
@@ -82,7 +86,7 @@ var content = `name: ${name} \n email: ${email} \n message: ${message} `
 
 var mail = {
   from: name,
-  to: 'info@cihadcengiz.com',  // Change to email address that you want to receive messages on
+  to: process.env.USER,  // Change to email address that you want to receive messages on
   subject: 'Aggregator New Message!',
   text: content
 }
@@ -104,6 +108,6 @@ app.use('/', router)
 
 // cron.schedule('*/5 * * * *', () => scrapeProduct('https://erasmusintern.org/traineeships','http://globalplacement.com/en/search-internships'));
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });

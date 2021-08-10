@@ -1,9 +1,8 @@
 //TODO
 
-[] - About Page
 [] - Logo
 [] - Advertisement????
-[] - Responsive design
+[x] - Responsive design
 [] - Contact Us
     [x] - Add Contact Form
     [] - Design changes

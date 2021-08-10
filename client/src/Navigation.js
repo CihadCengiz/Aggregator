@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import logo from "./logo.png";
 import "./App.css";
 import { Link } from "react-router-dom";
@@ -14,11 +14,11 @@ function Navigation() {
       bg="secondary"
       variant="dark"
       sticky="top"
-      className="d-flex justify-content-between px-5"
       expand='lg'
       collapseOnSelect 
+      className="d-flex justify-content-between"
     >
-      <Navbar.Brand className="d-flex align-items-center px-5">
+      <Navbar.Brand className="d-flex align-items-center ps-3">
         <img
           height="100px"
           width="100px"
@@ -28,17 +28,17 @@ function Navigation() {
 
         <Nav.Link as={Link} eventKey="0" style={navStyle} to="/">
           Find Internships
-        <Navbar.Toggle className="me-5" style={{marginLeft: 0}} />
         </Nav.Link>
       </Navbar.Brand>
-      <Navbar.Brand className="">
-        <Navbar.Collapse className="me-4">
+      <Navbar.Brand>
+        <Navbar.Toggle className=" ms-3 flex-md-row-reverse flex-sm-row align-items-center" style={{marginLeft: 0}} />
+        <Navbar.Collapse className="ms-3">
           <Nav>
             <Nav.Link as={Link} eventKey="1" style={navStyle} to="/internships">
               <Nav>Internships</Nav>
             </Nav.Link>
-            <Nav.Link as={Link} eventKey="2" style={navStyle} to="/about">
-              <Nav>About</Nav>
+            <Nav.Link as={Link} eventKey="2" style={navStyle} to="/Faq">
+              <Nav>FAQ</Nav>
             </Nav.Link>
             <Nav.Link as={Link} eventKey="3" style={navStyle} to="/contact">
               <Nav>Contact us</Nav>

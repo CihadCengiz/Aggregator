@@ -22,3 +22,8 @@
   .checkbox-parent {
       min-width: 130px;
   }
+  
+  html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+  }

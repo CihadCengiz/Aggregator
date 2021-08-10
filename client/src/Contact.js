@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import {BASE_API_URL} from './BASE_API'
+
 
 class App extends React.Component {
 
@@ -17,7 +19,7 @@ class App extends React.Component {
     e.preventDefault();
     axios({
       method: "POST",
-      url:"http://localhost:3001/send",
+      url:`${BASE_API_URL}/send`,
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {

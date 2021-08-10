@@ -97,9 +97,9 @@ export default function Internships() {
   }
 
   return (
-    <Container fluid className="my-4 px-5">
-      <Row className="px-5">
-        <Col xs={12} sm={4} md={3} lg={3} className="">
+    <Container fluid className="my-4">
+      <Row>
+        <Col xs={12} sm={4} md={3} lg={3}>
           <div className="d-flex justify-content-center">Advertisement</div>
           <CheckBox onParamChange={handleChange} />
         </Col>
