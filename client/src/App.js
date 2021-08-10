@@ -6,6 +6,7 @@ import Internships from './Internships';
 import Faq from './Faq';
 import Home from './Home';
 import Contact from './Contact';
+import Footer from './Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
