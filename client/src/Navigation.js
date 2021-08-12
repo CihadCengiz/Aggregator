@@ -16,12 +16,12 @@ function Navigation() {
       sticky="top"
       expand='lg'
       collapseOnSelect 
-      className="d-flex justify-content-between"
+      className="d-flex justify-content-between navbar-custom"
     >
       <Container fluid>
       <Navbar.Brand className="d-flex align-items-center">
         <img
-          height="100px"
+          height="40px"
           width="100px"
           alt="logo"
           src={logo}
@@ -32,7 +32,7 @@ function Navigation() {
         </Nav.Link>
       </Navbar.Brand>
         <Navbar.Toggle className="flex-md-row-reverse flex-sm-row align-items-center" />
-        <Navbar.Collapse className="ms-auto">
+        <Navbar.Collapse className="">
           <Nav className="ms-auto">
             <Nav.Link as={Link} eventKey="1" style={navStyle} to="/internships">
               <Nav>Internships</Nav>

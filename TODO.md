@@ -7,7 +7,7 @@
     [x] - Add Contact Form
     [] - Design changes
 [] - Donate????
-[] - FAQ
+[x] - FAQ
 [] - Header changes
 [] - Footer
 [] - Volunteer Opportunities
@@ -20,5 +20,6 @@
     [] - https://www.goabroad.com/
     [] - http://www.summerschoolsineurope.eu
 [] - UI changes
+[] - Landing page & loading screen
 [] - Schedule Cron jobs
 [] - Deploy!
