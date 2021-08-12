@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import bg from "./bg.svg";
 import styled from "styled-components";
+import expandDown from "./assets/expand-down.png";
+import expandUp from "./assets/expand-up.png";
 
 const StyledImg = styled.img`
   width: 90%;
@@ -30,6 +32,7 @@ const data = [
   },
 ];
 
+
 export default function Faq() {
   const [selected, setSelected] = useState(null)
 
@@ -38,6 +41,7 @@ export default function Faq() {
       return setSelected(null)
     }
 
+    
     setSelected(i)
   }
 
@@ -60,19 +64,17 @@ export default function Faq() {
         <h2 className="d-flex justify-content-center">
           Frequently Asked Questions
         </h2>
-        <div className="wrapper">
           <div className="accordion">
             {data.map((item, i) => (
-              <div className="item">
-                <div className="title" onClick={() => toggle(i)}>
+              <Col className="item text-muted" key={i}>
+                <div className="title font-weight-light" onClick={() => toggle(i)}>
                 <h2>{item.question}</h2>
-                <span>{selected === i ? "-" : "+"}</span>
+                <Image className="expand-image" src={selected === i ? expandUp : expandDown} alt="expand-icon" roundedCircle></Image>
                   </div>
                 <div className={selected === i ? "content show" : "content"}>{item.answer}</div>
-              </div>
+              </Col>
             ))}
           </div>
-        </div>
       </Row>
     </Container>
   );
