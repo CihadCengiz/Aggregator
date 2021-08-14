@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import {BASE_API_URL} from './BASE_API'
 
 
@@ -38,6 +38,8 @@ class App extends React.Component {
   render() {
     return(
       <Container className="mt-5">
+        <Row>
+          <Col>
           <h1>Get in touch!</h1>
           <h5 className="text-muted font-weight-light">We would love to hear from you! Please fill out our form below and we will contact you as soon as possible.</h5>
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
@@ -53,8 +55,18 @@ class App extends React.Component {
               <label htmlFor="message">Message *</label>
               <textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary mt-3">Submit</button>
         </form>
+        </Col>
+          <Col className="d-flex justify-content-center">
+            <div>
+            <h1 className="mb-5">Our Social Media Accounts</h1>
+            <span>FB</span>
+            <span>LinkedIn</span>
+            <span>Insta</span>
+            </div>
+          </Col>
+        </Row>
       </Container>
     );
   }

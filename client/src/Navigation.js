@@ -1,12 +1,17 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "./logo.png";
 import "./App.css";
 import { Link } from "react-router-dom";
 
 function Navigation() {
   const navStyle = {
+    color: "white"
+  };
+  const brandStyle = {
     color: "white",
+    paddingLeft: "0",
+    fontSize: "1.5em",
+    fontFamily: 'Raleway'
   };
 
   return (
@@ -19,16 +24,9 @@ function Navigation() {
       className="d-flex justify-content-between navbar-custom"
     >
       <Container fluid>
-      <Navbar.Brand className="d-flex align-items-center">
-        <img
-          height="40px"
-          width="100px"
-          alt="logo"
-          src={logo}
-        />
-
-        <Nav.Link as={Link} eventKey="0" style={navStyle} to="/">
-          Find Internships
+      <Navbar.Brand>
+        <Nav.Link as={Link} eventKey="0" style={brandStyle} to="/">
+        <b>work | OK</b>
         </Nav.Link>
       </Navbar.Brand>
         <Navbar.Toggle className="flex-md-row-reverse flex-sm-row align-items-center" />

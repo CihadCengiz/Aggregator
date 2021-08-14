@@ -1,6 +1,6 @@
 //TODO
 
-[] - Logo
+[x] - Logo
 [] - Advertisement????
 [x] - Responsive design
 [] - Contact Us
@@ -12,6 +12,7 @@
 [] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data
+[] - Mobile Avdanced Search Collapse
 [] - Fetch other sites
     [] - http://globalplacement.com/
     [] - http://www.praxisnetwork.eu/
