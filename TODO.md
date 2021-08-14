@@ -1,18 +1,17 @@
 //TODO
 
 [x] - Logo
-[] - Advertisement????
-[x] - Responsive design
+[] - Responsive design
 [] - Contact Us
     [x] - Add Contact Form
     [] - Design changes
-[] - Donate????
+[] - Donate???? Later in germany
 [x] - FAQ
 [] - Header changes
 [] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data
-[] - Mobile Avdanced Search Collapse
+[] - Mobile - Avdanced Search Collapse
 [] - Fetch other sites
     [] - http://globalplacement.com/
     [] - http://www.praxisnetwork.eu/

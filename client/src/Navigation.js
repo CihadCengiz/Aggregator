@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   const navStyle = {
-    color: "white"
+    color: "white",
+    fontSize: "1.2em",
+    fontFamily: 'Raleway'
   };
   const brandStyle = {
     color: "white",
