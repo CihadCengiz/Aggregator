@@ -6,7 +6,7 @@ const SearchTitle = styled.h4`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
-  padding-bottom: 0.5em;
+  padding-bottom: 10px;
 `;
 
 const StyledBg = styled.div`
