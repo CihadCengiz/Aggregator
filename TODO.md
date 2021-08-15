@@ -7,8 +7,8 @@
     [] - Design changes
 [] - Donate???? Later in germany
 [x] - FAQ
-[] - Header changes
-[] - Footer
+[x] - Header changes
+[x] - Footer
 [] - Volunteer Opportunities
 [] - Correct Erasmusintern data
 [] - Mobile - Avdanced Search Collapse
