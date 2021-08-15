@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap'
 import {BASE_API_URL} from './BASE_API'
+import "./App.css";
 
 
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
 
   render() {
     return(
+      <div className="main-contact">
       <Container className="mt-5">
         <Row>
           <Col>
@@ -68,6 +70,7 @@ class App extends React.Component {
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 
