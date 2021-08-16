@@ -1,6 +1,7 @@
 //TODO
 
 [x] - Logo
+[] - Home Page
 [] - Responsive design
 [x] - Contact Us
     [x] - Add Contact Form
