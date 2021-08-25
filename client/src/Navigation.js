@@ -37,10 +37,13 @@ function Navigation() {
             <Nav.Link as={Link} eventKey="1" style={navStyle} to="/internships">
               <Nav>Internships</Nav>
             </Nav.Link>
-            <Nav.Link as={Link} eventKey="2" style={navStyle} to="/Faq">
+            <Nav.Link as={Link} eventKey="2" style={navStyle} to="/volunteers">
+              <Nav>Volunteer Opportunities</Nav>
+            </Nav.Link>
+            <Nav.Link as={Link} eventKey="3" style={navStyle} to="/Faq">
               <Nav>FAQ</Nav>
             </Nav.Link>
-            <Nav.Link as={Link} eventKey="3" style={navStyle} to="/contact">
+            <Nav.Link as={Link} eventKey="4" style={navStyle} to="/contact">
               <Nav>Contact us</Nav>
             </Nav.Link>
           </Nav>
