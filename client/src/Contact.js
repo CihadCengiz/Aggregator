@@ -2,6 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap'
 import {BASE_API_URL} from './BASE_API'
+import "./App.css";
+import contactsvg from "./character.svg"
+import styled from "styled-components";
+
+
+const StyledImg = styled.img`
+max-height: 800px;
+`;
 
 
 class App extends React.Component {
@@ -37,6 +45,7 @@ class App extends React.Component {
 
   render() {
     return(
+      <div className="main-contact">
       <Container className="mt-5">
         <Row>
           <Col>
@@ -58,16 +67,20 @@ class App extends React.Component {
           <button type="submit" className="btn btn-primary mt-3">Submit</button>
         </form>
         </Col>
-          <Col className="d-flex justify-content-center">
-            <div>
-            <h1 className="mb-5">Our Social Media Accounts</h1>
-            <span>FB</span>
-            <span>LinkedIn</span>
-            <span>Insta</span>
-            </div>
-          </Col>
+        <Col className="d-none d-md-flex justify-content-center">
+        <StyledImg
+          src={contactsvg}
+          alt="contact illustration"
+        />
+        </Col>
+        </Row>
+        <Row>
+          <div>
+
+          </div>
         </Row>
       </Container>
+      </div>
     );
   }
 
