@@ -40,7 +40,7 @@ export default function useFetchVol(params, page, size) {
         cancelToken: cancelToken1.token,
         params: { page: page, size: size, ...params}
     }).then(res => {
-      dispatch({type: ACTIONS.GET_DATA, payload: { volunteers: res.data.content, volunteerCount: res.data.totalvolunteers }});
+      dispatch({type: ACTIONS.GET_DATA, payload: { volunteers: res.data.content, volunteerCount: res.data.totalVols }});
     }).catch(e => {
         if(axios.isCancel(e)) return
         dispatch({type: ACTIONS.ERROR, payload: { error: e}})

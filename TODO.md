@@ -10,7 +10,7 @@
 [x] - FAQ
 [x] - Header changes
 [x] - Footer
-[] - Volunteer Opportunities
+[x] - Volunteer Opportunities
 [] - Mobile - Avdanced Search Collapse
 [] - Correct Erasmusintern data
 [] - Fetch other sites
