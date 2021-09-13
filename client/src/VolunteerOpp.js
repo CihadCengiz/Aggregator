@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Volunteer from "./Volunteer";
 import JobsPagination from "./JobsPagination";
 import SearchForm from "./SearchForm";
 import useFetchVol from "./useFetchVol";
 import CheckBox from "./CheckBox";
+import Collapse from 'react-bootstrap/Collapse'
 
 
 let checkedDegree = [];
@@ -98,11 +99,35 @@ export default function VolunteerOpp() {
     });
   }
 
+  function ShowSearch() {
+    const [open, setOpen] = useState(false);
+  
+    return (
+      <>
+        <Button
+          onClick={() => setOpen(!open)}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+        >
+          Show Advanced Search Settings
+        </Button>
+        <Collapse in={open}>
+          <div id="example-collapse-text">
+          <CheckBox onParamChange={handleChange}/>
+          </div>
+        </Collapse>
+      </>
+    );
+  }
+
   return (
     <Container fluid className="my-4">
       <Row>
-        <Col xs={12} sm={4} md={3} lg={3}>
-          <CheckBox onParamChange={handleChange} />
+      <Col className="d-block d-sm-none text-center pb-3">
+          <ShowSearch/>
+        </Col>
+        <Col xs={12} sm={4} md={3} lg={3} className="d-none d-sm-block">
+          <CheckBox />
         </Col>
       <Col xs={12} sm={8} md={9} lg={9}>
           <div className="d-flex justify-content-center">

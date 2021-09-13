@@ -22,7 +22,7 @@ const StyledCheckBox = styled.div`
   font-size: 15px;
 `;
 
-function CheckBox({ onParamChange }) {
+function CheckBox2({ onParamChange }) {
   return (
     <div className="checkbox-parent pt-3">
       <SearchTitle>Advanced Search</SearchTitle>
@@ -273,4 +273,4 @@ function CheckBox({ onParamChange }) {
   );
 }
 
-export default CheckBox;
+export default CheckBox2;
