@@ -5,6 +5,7 @@ import JobsPagination from "./JobsPagination";
 import SearchForm from "./SearchForm";
 import useFetchJobs from "./useFetchJobs";
 import CheckBox from "./CheckBox";
+import ClipLoader from "react-spinners/ClipLoader";
 
 let checkedDegree = [];
 let checkedDOP = [];
@@ -107,7 +108,12 @@ export default function Internships() {
       <Row>
         <Col xs={12} sm={4} md={3} lg={3}>
           <div className="mb-1 d-grid gap-2">
-            <Button variant="secondary" size="lg" className="d-block d-sm-none" onClick={ShowFilters}>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="d-block d-sm-none"
+              onClick={ShowFilters}
+            >
               Show Filters
             </Button>
           </div>
@@ -116,10 +122,6 @@ export default function Internships() {
           </div>
         </Col>
         <Col xs={12} sm={8} md={9} lg={9}>
-          <div className="d-flex justify-content-center">
-            {loading && <h1>Loading...</h1>}
-            {error && <h1>Error...</h1>}
-          </div>
           <h4 className="text-muted font-weight-light">
             Found {jobCount} internship offers!
           </h4>
@@ -129,6 +131,12 @@ export default function Internships() {
             setPage={setPage}
             hasNextPage={hasNextPage}
           />
+          <div className="d-flex justify-content-center">
+            {loading && (
+              <ClipLoader color={"#36D7B7"} loading={loading} size={100} />
+            )}
+            {error && <h1>Error...</h1>}
+          </div>
           {jobs.map((job) => {
             return <Job key={job.id} job={job} />;
           })}
