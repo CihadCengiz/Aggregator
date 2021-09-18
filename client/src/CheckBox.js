@@ -24,7 +24,7 @@ const StyledCheckBox = styled.div`
 
 function CheckBox({ onParamChange }) {
   return (
-    <div className="checkbox-parent">
+    <div className="checkbox-parent pt-3">
       <SearchTitle>Advanced Search</SearchTitle>
       <StyledBg>Degree</StyledBg>
       <StyledCheckBox>

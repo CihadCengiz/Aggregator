@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Job from "./Job";
 import JobsPagination from "./JobsPagination";
 import SearchForm from "./SearchForm";
@@ -96,11 +96,24 @@ export default function Internships() {
     });
   }
 
+  const [isActive, setActive] = useState(false);
+
+  const ShowFilters = () => {
+    setActive(!isActive);
+  };
+
   return (
     <Container fluid className="my-4">
       <Row>
         <Col xs={12} sm={4} md={3} lg={3}>
-          <CheckBox onParamChange={handleChange} />
+          <div className="mb-1 d-grid gap-2">
+            <Button variant="secondary" size="lg" className="d-block d-sm-none" onClick={ShowFilters}>
+              Show Filters
+            </Button>
+          </div>
+          <div className={isActive ? "d-block d-sm-none" : "d-none d-sm-block"}>
+            <CheckBox onParamChange={handleChange} />
+          </div>
         </Col>
         <Col xs={12} sm={8} md={9} lg={9}>
           <div className="d-flex justify-content-center">
