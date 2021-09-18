@@ -95,36 +95,30 @@ export default function VolunteerOpp() {
       return { ...prevParams, [param]: value };
     });
   }
+  
+  const [isActive, setActive] = useState(false);
 
-  function ShowSearch() {
-    const [open, setOpen] = useState(false);
-
-    return (
-      <>
-        <Button
-          onClick={() => setOpen(!open)}
-          aria-controls="example-collapse-text"
-          aria-expanded={open}
-        >
-          Show Advanced Search Settings
-        </Button>
-        <Collapse in={open}>
-          <div id="example-collapse-text">
-            <CheckBox onParamChange={handleChange} />
-          </div>
-        </Collapse>
-      </>
-    );
-  }
+  const ShowFilters = () => {
+    setActive(!isActive);
+  };
 
   return (
     <Container fluid className="my-4">
       <Row>
-        <Col className="d-block d-sm-none text-center pb-3">
-          <ShowSearch />
-        </Col>
-        <Col xs={12} sm={4} md={3} lg={3} className="d-none d-sm-block">
-          <CheckBox />
+      <Col xs={12} sm={4} md={3} lg={3}>
+          <div className="mb-1 d-grid gap-2">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="d-block d-sm-none"
+              onClick={ShowFilters}
+            >
+              Show Filters
+            </Button>
+          </div>
+          <div className={isActive ? "d-block d-sm-none" : "d-none d-sm-block"}>
+            <CheckBox onParamChange={handleChange} />
+          </div>
         </Col>
         <Col xs={12} sm={8} md={9} lg={9}>
           <h4 className="text-muted font-weight-light">
