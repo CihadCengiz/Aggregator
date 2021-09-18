@@ -1,24 +1,22 @@
-import React from 'react';
-import './App.css';
-import Navigation from './Navigation';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Internships from './Internships';
+import React from "react";
+import "./App.css";
+import Navigation from "./Navigation";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Internships from "./Internships";
 import VolunteerOpp from "./VolunteerOpp";
-import Faq from './Faq';
-import Home from './Home';
-import Contact from './Contact';
-import Footer from './Footer';
-import privacy from './privacy';
+import Faq from "./Faq";
+import Home from "./Home";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import privacy from "./privacy";
 import ScrollToTop from "./ScrollToTop";
-import terms from './terms';
-
-
+import terms from "./terms";
 
 function App() {
   return (
     <div>
       <Router>
-      <ScrollToTop />
+        <ScrollToTop />
         <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -29,7 +27,7 @@ function App() {
           <Route path="/privacy" component={privacy} />
           <Route path="/terms" component={terms} />
         </Switch>
-      <Footer />
+        <Footer />
       </Router>
     </div>
   );
