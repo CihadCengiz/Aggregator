@@ -93,6 +93,20 @@ app.get("/volunteers", async (req, res) => {
   });
 });
 
+app.get("/dates", async (req, res) => {
+  const Op = sequelize.Sequelize.Op;
+
+  const jobs = await Jobs.findAndCountAll({
+    where: {
+      id:  {
+        [Op.lt]: 1001
+      }
+    },
+    attributes: ['postdate']
+  });
+  res.send(jobs.rows);
+});
+
 var transport = {
   host: 'smtp.hostinger.com', // Don’t forget to replace with the SMTP host of your provider
   port: 465,
