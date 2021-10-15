@@ -60,7 +60,7 @@ app.get("/jobs", async (req, res) => {
   currentDegree=[]
 });
 
-app.get("/volunteers", async (req, res) => {
+app.get("/volunteer", async (req, res) => {
   const pageAsNumber = Number.parseInt(req.query.page);
   const sizeAsNumber = Number.parseInt(req.query.size);
   const getLocation = req.query.location;
