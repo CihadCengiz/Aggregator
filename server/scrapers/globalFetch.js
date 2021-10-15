@@ -20,7 +20,7 @@ async function globalFetch() {
   const degree = ["Check details."];
   const company = ["Check details."];
   const dOpp = ["Check details."];
-  const deadline = ["Check details."];
+  // const deadline = ["Check details."];
 
   for (let k = 1; k < 123; k++) {
     await page.goto(
@@ -116,7 +116,7 @@ async function globalFetch() {
 
   for (let i = 0; i < title.length; i++) {
     var text = format(
-      "insert into global(title,logo,redirect,postdate,location,company,degree,fofstd,dopportunities,duration,deadline) values (%L, %L, %L, %L, %L, %L, %L, %L, %L, %L, %L)",
+      "insert into jobs(title,logo,redirect,postdate,location,company,degree,fofstd,dopportunities,duration) values (%L, %L, %L, %L, %L, %L, %L, %L, %L, %L)",
       title[i],
       logo[i],
       redirect[i],
@@ -127,7 +127,7 @@ async function globalFetch() {
       fofstd[i],
       dOpp[0],
       duration[0],
-      deadline[0],
+      // deadline[0],
     );
 
     try {

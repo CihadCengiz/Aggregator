@@ -80,7 +80,7 @@ app.get("/volunteers", async (req, res) => {
   const volunteers = await Volunteer.findAndCountAll({
     limit: size,
     offset: page * size,
-    order: [['id', 'ASC'],['postdate', 'DESC']],
+    order: [['postdate', 'DESC']],
     where: {
       location: getLocation ? { [Op.like]: `%${getLocation.toUpperCase()}%` } : { [Op.ne]: null },
       duration: getDuration ? {  [Op.like]: {[Op.any]: [`%${getDuration[0]}%`,`%${getDuration[1]}%`,`%${getDuration[2]}%`,`%${getDuration[3]}%`,`%${getDuration[4]}%`,`%${getDuration[5]}%`,`%${getDuration[6]}%`,`%${getDuration[7]}%`,`%${getDuration[8]}%`,`%${getDuration[9]}%`,`%${getDuration[10]}%`]} }  : { [Op.ne]: null },
