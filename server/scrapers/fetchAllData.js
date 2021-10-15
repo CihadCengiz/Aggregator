@@ -157,7 +157,7 @@ for (let k = 0; k < allJobs.length; k++) {
   for (let i = 0; i < allJobs.length; i++) {
     console.log(`${i}. page done`);
     var text = format(
-      "insert into jobs(title,logo,redirect,postdate,location,company,degree,dopportunities,fofstd,duration,deadline) values (%L, %L, %L, %L, %L, %L, %L, %L, %L, %L, %L)",
+      "insert into global(title,logo,redirect,postdate,location,company,degree,dopportunities,fofstd,duration,deadline) values (%L, %L, %L, %L, %L, %L, %L, %L, %L, %L, %L)",
       allJobs[i],
       jobLogos[i],
       jobRedirect[i],

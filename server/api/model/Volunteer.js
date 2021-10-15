@@ -29,7 +29,7 @@ Volunteers.init(
   },
   {
     sequelize,
-    modelName: "volunteers",
+    modelName: "volunteer",
     timestamps: false,
   }
 );

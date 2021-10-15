@@ -12,9 +12,9 @@
 [x] - Footer
 [x] - Volunteer Opportunities
 [x] - Mobile - Avdanced Search Collapse
-[] - Correct Erasmusintern data
+[x] - Correct Erasmusintern data
 [] - Fetch other sites
-    [] - http://globalplacement.com/
+    [x] - http://globalplacement.com/
     [] - http://www.praxisnetwork.eu/
     [] - https://www.gooverseas.com/
     [] - https://eurasmus.com/en/europe-internships/
