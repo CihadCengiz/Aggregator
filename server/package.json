@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd build && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
