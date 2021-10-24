@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "devStart": "nodemon index.js",
     "start": "node index.js",
-    "web": "node index.js"
+    "heroku-postbuild": "cd build && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -16,12 +16,10 @@
     "axios": "^0.21.1",
     "cheerio": "*",
     "cors": "^2.8.5",
-    "date-and-time": "^2.0.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-promise-router": "^4.1.0",
     "node-cron": "^3.0.0",
-    "node-fetch": "^2.6.1",
     "nodemailer": "^6.6.3",
     "pg": "^8.6.0",
     "pg-format": "^1.0.4",
