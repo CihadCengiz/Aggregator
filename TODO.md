@@ -6,7 +6,7 @@
 [x] - Contact Us
     [x] - Add Contact Form
     [x] - Design changes
-[] - Donate???? Later in germany
+[] - Donate???? Later in Italy?
 [x] - FAQ
 [x] - Header changes
 [x] - Footer
