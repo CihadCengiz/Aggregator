@@ -21,6 +21,13 @@
     [] - https://www.goabroad.com/
     [] - http://www.summerschoolsineurope.eu
 [] - UI changes
+[] - Pagination color change
 [x] - Landing page & loading screen
 [] - Schedule Cron jobs
 [] - Deploy!
+
+-----------------------------------------------------------
+//Bugs
+
+[] - useEffect breaks dark-mode
+[] - ClickOutside is buggy idk why (first expandable doesn't work, last one works properly, others weird)
