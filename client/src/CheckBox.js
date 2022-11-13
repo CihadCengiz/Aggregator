@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Form } from "react-bootstrap";
+
+import styled from "styled-components";
 
 const SearchTitle = styled.h4`
   font-size: 1.5em;

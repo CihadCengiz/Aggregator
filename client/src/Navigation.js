@@ -43,7 +43,6 @@ function Navigation() {
               <Nav>Contact us</Nav>
             </Nav.Link>
           </Nav>
-        <DarkModeComponent />
 
         </Navbar.Collapse>
         </Container>

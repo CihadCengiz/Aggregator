@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Navigation from "./Navigation";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Internships from "./Internships";
 import Faq from "./Faq";
 import Home from "./Home";
@@ -10,6 +9,8 @@ import Footer from "./Footer";
 import privacy from "./privacy";
 import ScrollToTop from "./ScrollToTop";
 import terms from "./terms";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

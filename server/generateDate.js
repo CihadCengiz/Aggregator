@@ -37,16 +37,6 @@ let CONNECTION_STRING =
       } catch (err) {
         console.log(err.stack);
       }
-
-    //   return {
-    //   title,
-    //   company,
-    //   location,
-    //   duration,
-    //   period,
-    //   postdate,
-    //   redirect,
-    // };
 }
 
 generateDate();
